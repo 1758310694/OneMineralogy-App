@@ -25,12 +25,30 @@
 			"path" : "pages/tabBar/study/Study",
 			"style" : 
 			{
-				"navigationBarTitleText" : "Study",
+				"navigationBarTitleText" : "Demo",
 				"navigationBarBackgroundColor": "#158BB8",
 				"navigationBarTextStyle": "white",
 				"enablePullDownRefresh": false
 			}
-		}
+		},
+		 {
+		    "path": "pages/network/network",
+		    "style": {
+		      "navigationBarTitleText": "矿物共生网络图"
+		    }
+		  },
+		   {
+		     "path": "pages/network/map",
+		     "style": {
+		       "navigationBarTitleText": "地点热力密度图"
+		     }
+		    },
+			{
+			  "path": "pages/network/network_elements",
+			  "style": {
+			    "navigationBarTitleText": "矿物-元素分布网络图"
+			  }
+			 }
 		// {
 		// 	"path" : "pages/tabBar/mine/mine",
 		// 	"style" : 
@@ -67,7 +85,7 @@
 			
 		},{
 			"pagePath": "pages/tabBar/study/Study",
-			"text": "study",
+			"text": "demo",
 			"iconPath": "static/study.png",
 			"selectedIconPath": "static/study1.png"
 		}
