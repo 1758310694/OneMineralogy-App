@@ -190,9 +190,17 @@ export default {
 
     // 应用筛选器
     applyFilters() {
+      const inputElements = this.elements
+        ? this.elements.split(/[,，\s]+/).map(e => e.trim()).filter(e => e)
+        : [];
+    
       this.filteredData = this.jsonData.filter(mineral => {
+        const hasAllElements = inputElements.length
+          ? inputElements.every(el => mineral.elements.includes(el))
+          : true;
+    
         return (
-          (this.elements ? mineral.elements.some(el => el.includes(this.elements)) : true) &&
+          hasAllElements &&
           (this.hardness ? mineral.hmin <= this.hardness && mineral.hmax >= this.hardness : true) &&
           (this.density ? mineral.dmeas <= this.density && mineral.dmeas2 >= this.density : true) &&
           (this.colour ? mineral.colour.includes(this.colour) : true) &&
@@ -201,6 +209,7 @@ export default {
         );
       });
     },
+
 
     // 应用搜索
     applySearch() {
