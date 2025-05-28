@@ -4,7 +4,7 @@
 			"path" : "pages/tabBar/index/Index",
 			"style" : 
 			{
-				"navigationBarTitleText" : "Mineral",
+				"navigationBarTitleText" : "首页",
 				"navigationBarBackgroundColor": "#158BB8",
 				"navigationBarTextStyle": "white",
 				"enablePullDownRefresh": false
@@ -15,7 +15,7 @@
 			"path" : "pages/tabBar/search/Search",
 			"style" : 
 			{
-				"navigationBarTitleText" : "Search",
+				"navigationBarTitleText" : "检索",
 				"navigationBarBackgroundColor": "#158BB8",
 				"navigationBarTextStyle": "white",
 				"enablePullDownRefresh": false
@@ -25,7 +25,7 @@
 			"path" : "pages/tabBar/study/Study",
 			"style" : 
 			{
-				"navigationBarTitleText" : "Demo",
+				"navigationBarTitleText" : "用例",
 				"navigationBarBackgroundColor": "#158BB8",
 				"navigationBarTextStyle": "white",
 				"enablePullDownRefresh": false
@@ -46,7 +46,7 @@
 			{
 			  "path": "pages/network/network_elements",
 			  "style": {
-			    "navigationBarTitleText": "矿物-元素分布网络图"
+			    "navigationBarTitleText": "矿物-元素共生网络图"
 			  }
 			 }
 		// {
@@ -74,18 +74,18 @@
 		"backgroundColor": "#ffffff",
 		"list": [{
 			"pagePath": "pages/tabBar/index/Index",
-			"text": "home",
+			"text": "首页",
 			"iconPath": "static/index.png",
 			"selectedIconPath": "static/index1.png"
 		}, {
 			"pagePath": "pages/tabBar/search/Search",
-			"text": "search",
+			"text": "检索",
 			"iconPath": "static/search.png",
 			"selectedIconPath": "static/search1.png"
 			
 		},{
 			"pagePath": "pages/tabBar/study/Study",
-			"text": "demo",
+			"text": "用例",
 			"iconPath": "static/study.png",
 			"selectedIconPath": "static/study1.png"
 		}
