@@ -1,12 +1,15 @@
 <template>
   <view class="container">
-    <button @click="runCode('3.1.1.py')">矿物共生与网络分析</button>
-    <button @click="runCode('3.1.2.py')">矿物-元素网络分析</button>
+	<text>查询</text>
+	<button @click="runCode('3.3.1.py')">矿物属性组合过滤</button>
+	<button @click="runCode('3.3.2.py')">矿物品种信息查询</button>
+	<text>探索性分析</text>
+	<button @click="runCode('3.1.1.py')">矿物共生与网络分析</button>
+	<button @click="runCode('3.1.2.py')">矿物-元素共生网络分析</button>
     <button @click="runCode('3.1.3.py')">地点热力密度图</button>
-    <button @click="runCode('3.2.1.py')">预测目标地点出现新矿物</button>
-    <button @click="runCode('3.2.2.py')">矿物共生关系</button>
-    <button @click="runCode('3.3.1.py')">矿物属性组合过滤</button>
-    <button @click="runCode('3.3.2.py')">矿物品种信息查询</button>
+	<text>推理</text>
+   <button @click="runCode('3.2.1.py')">预测目标地点出现新矿物</button>
+   <button @click="runCode('3.2.2.py')">矿物共生关系</button>
 
     <!-- 筛选表单 -->
     <view v-if="showFilterForm">
