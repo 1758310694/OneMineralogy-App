@@ -32,16 +32,10 @@ git clone https://github.com/1758310694/OneMineralogy-App.git
 
 **OpenMindat Data API token获取**
 
-首先该APP在Mindat连接需要token作为权限访问服务器，代码中的token是可用的，但每天访问次数存在限制。若限制时，用户可自行替换自己获取的token。
+首先该APP在Mindat连接需要token作为权限访问服务器，用户可获取token。
 
-1、token获取步骤：https://www.mindat.org/a/how_to_get_my_mindat_api_key
+token获取步骤：https://www.mindat.org/a/how_to_get_my_mindat_api_key
 
-2、源码中token替换：`/pages` `/tabBar` `/search` `/Search.vue`中
-```coffee
-header: {
-            'Authorization': 'Token ******************'
-          }
-```
 
 
 
