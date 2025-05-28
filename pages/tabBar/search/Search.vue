@@ -77,41 +77,41 @@
     </view>
     <!-- 地质材料的展示部分 -->
     <view class="geomaterials-section" >
-      <h3 v-if="selectedFunction === 'contains'">Materials containing {{ elementInput }}:</h3>
+      <h3 v-if="selectedFunction === 'contains'">Materials containing {{ elementInput }}(共 {{ geomaterials.length }} 条):</h3>
       <h3 v-else-if="selectedFunction === 'notContains'">Materials not containing {{ elementInput }}(共 {{ geomaterials.length }} 条):</h3>
-      <h3 v-else-if="selectedFunction === 'containAllButNot'">Materials containing {{ elementInput }} but not {{ excludeElementInput }}:</h3>
-      <h3 v-else-if="selectedFunction === 'containOnlyElems'">Materials containing only {{ elementInput }}:</h3>
-	  <h3 v-if="selectedFunction === 'hardnessGT'">Materials with hardness greater than {{ minHardness }}:</h3>
-	  <h3 v-if="selectedFunction === 'hardnessLT'">Materials with hardness less than {{ maxHardness }}:</h3>
-	  <h3 v-if="selectedFunction === 'hardnessRange'">Materials with hardness between {{ minHardness }} and {{ maxHardness }}:</h3>
-	  <h3 v-if="selectedFunction === 'densGT'">Materials with density greater than {{ mindensity }}:</h3>
-	  <h3 v-if="selectedFunction === 'densLT'">Materials with density less than {{ maxdensity }}:</h3>
-	   <h3 v-if="selectedFunction === 'densRange'">Materials with density between {{ mindensity }} and {{ maxdensity }}:</h3>
-	   <h3 v-if="selectedFunction === 'optical2vRange'">Materials with optical2v between {{ minoptical2v }} and {{ maxoptical2v }}:</h3>
-	     <h3 v-if="selectedFunction === 'csystem'">Materials csystal_system {{csystem}} :</h3>
-		 <h3 v-if="selectedFunction === 'fracturetype'">Materials fracturetype {{fracturetype}} :</h3>
-		 <h3 v-if="selectedFunction === 'colour'">Materials colour {{colour}} :</h3>
-		 <h3 v-if="selectedFunction === 'streak'">Materials streak {{streak}} :</h3>
-		 <h3 v-if="selectedFunction === 'diapheny'">Materials diapheny {{diapheny}} :</h3>
-		 <h3 v-if="selectedFunction === 'lustretype'">Materials lustretype {{lustretype}} :</h3>
-		 <h3 v-if="selectedFunction === 'opticalsign'">Materials opticalsign {{opticalsign}} :</h3>
-		 <h3 v-if="selectedFunction === 'polytypeof'">Materials polytypeof {{polytypeof}} :</h3>
-		 <h3 v-if="selectedFunction === 'cleavagetype'">Materials cleavagetype {{cleavagetype}} :</h3>
-		 <h3 v-if="selectedFunction === 'name'">Materials name {{name}} :</h3>
-		 <h3 v-if="selectedFunction === 'q'">Materials searchName {{q}} :</h3>
-		  <h3 v-if="selectedFunction === 'id'">Materials Mindat_id {{id}} :</h3>
-		 <h3 v-if="selectedFunction === 'varietyof'">Materials varietyof {{varietyof}} :</h3>
-		 <h3 v-if="selectedFunction === 'entrytype'">Materials entrytype {{entrytype}} :</h3>
-		 <h3 v-if="selectedFunction === 'retrievedbycombined'">Materials retrieved by combined conditions:</h3>
-		 <h3 v-if="selectedFunction === 'countrylist'">Materials countrylist:</h3>
-		 <h3 v-if="selectedFunction === 'localitiesid'">Materials Localities_id:</h3>
-		 <h3 v-if="selectedFunction === 'description'">Materials description:</h3>
-		 <h3 v-if="selectedFunction === 'localitiesElementsInc'">Materials Localities_elements_inc:</h3>
-		 <h3 v-if="selectedFunction === 'localitiesElementsExc'">Materials Localities_elements_exc:</h3>
-		 <h3 v-if="selectedFunction === 'localitiesElementsIncExc'">Materials Localities_elements_inc_exc:</h3>
-		 <h3 v-if="selectedFunction === 'localitiesAge'">Materials Localities_age:</h3>	
-		 <h3 v-if="selectedFunction === 'mineralsImaList'">Materials minerals_ima_list:</h3>	
-		 <h3 v-if="selectedFunction === 'mineralsImaRetrieve'">Materials minerals_ima_retrieve:</h3>
+      <h3 v-else-if="selectedFunction === 'containAllButNot'">Materials containing {{ elementInput }} but not {{ excludeElementInput }}(共 {{ geomaterials.length }} 条):</h3>
+      <h3 v-else-if="selectedFunction === 'containOnlyElems'">Materials containing only {{ elementInput }}(共 {{ geomaterials.length }} 条):</h3>
+	  <h3 v-if="selectedFunction === 'hardnessGT'">Materials with hardness greater than {{ minHardness }}(共 {{ geomaterials.length }} 条):</h3>
+	  <h3 v-if="selectedFunction === 'hardnessLT'">Materials with hardness less than {{ maxHardness }}(共 {{ geomaterials.length }} 条):</h3>
+	  <h3 v-if="selectedFunction === 'hardnessRange'">Materials with hardness between {{ minHardness }} and {{ maxHardness }}(共 {{ geomaterials.length }} 条):</h3>
+	  <h3 v-if="selectedFunction === 'densGT'">Materials with density greater than {{ mindensity }}(共 {{ geomaterials.length }} 条):</h3>
+	  <h3 v-if="selectedFunction === 'densLT'">Materials with density less than {{ maxdensity }}(共 {{ geomaterials.length }} 条):</h3>
+	   <h3 v-if="selectedFunction === 'densRange'">Materials with density between {{ mindensity }} and {{ maxdensity }}(共 {{ geomaterials.length }} 条):</h3>
+	   <h3 v-if="selectedFunction === 'optical2vRange'">Materials with optical2v between {{ minoptical2v }} and {{ maxoptical2v }}(共 {{ geomaterials.length }} 条):</h3>
+	     <h3 v-if="selectedFunction === 'csystem'">Materials csystal_system {{csystem}}(共 {{ geomaterials.length }} 条):</h3>
+		 <h3 v-if="selectedFunction === 'fracturetype'">Materials fracturetype {{fracturetype}}(共 {{ geomaterials.length }} 条):</h3>
+		 <h3 v-if="selectedFunction === 'colour'">Materials colour {{colour}}(共 {{ geomaterials.length }} 条):</h3>
+		 <h3 v-if="selectedFunction === 'streak'">Materials streak {{streak}}(共 {{ geomaterials.length }} 条):</h3>
+		 <h3 v-if="selectedFunction === 'diapheny'">Materials diapheny {{diapheny}}(共 {{ geomaterials.length }} 条):</h3>
+		 <h3 v-if="selectedFunction === 'lustretype'">Materials lustretype {{lustretype}}(共 {{ geomaterials.length }} 条):</h3>
+		 <h3 v-if="selectedFunction === 'opticalsign'">Materials opticalsign {{opticalsign}}(共 {{ geomaterials.length }} 条):</h3>
+		 <h3 v-if="selectedFunction === 'polytypeof'">Materials polytypeof {{polytypeof}}(共 {{ geomaterials.length }} 条):</h3>
+		 <h3 v-if="selectedFunction === 'cleavagetype'">Materials cleavagetype {{cleavagetype}}(共 {{ geomaterials.length }} 条):</h3>
+		 <h3 v-if="selectedFunction === 'name'">Materials name {{name}}(共 {{ geomaterials.length }} 条):</h3>
+		 <h3 v-if="selectedFunction === 'q'">Materials searchName {{q}}(共 {{ geomaterials.length }} 条):</h3>
+		  <h3 v-if="selectedFunction === 'id'">Materials Mindat_id {{id}}(共 {{ geomaterials.length }} 条):</h3>
+		 <h3 v-if="selectedFunction === 'varietyof'">Materials varietyof {{varietyof}}(共 {{ geomaterials.length }} 条):</h3>
+		 <h3 v-if="selectedFunction === 'entrytype'">Materials entrytype {{entrytype}}(共 {{ geomaterials.length }} 条):</h3>
+		 <h3 v-if="selectedFunction === 'retrievedbycombined'">Materials retrieved by combined conditions(共 {{ geomaterials.length }} 条):</h3>
+		 <h3 v-if="selectedFunction === 'countrylist'">Materials countrylist(共 {{ geomaterials.length }} 条):</h3>
+		 <h3 v-if="selectedFunction === 'localitiesid'">Materials Localities_id(共 {{ geomaterials.length }} 条):</h3>
+		 <h3 v-if="selectedFunction === 'description'">Materials description(共 {{ geomaterials.length }} 条):</h3>
+		 <h3 v-if="selectedFunction === 'localitiesElementsInc'">Materials Localities_elements_inc(共 {{ geomaterials.length }} 条):</h3>
+		 <h3 v-if="selectedFunction === 'localitiesElementsExc'">Materials Localities_elements_exc(共 {{ geomaterials.length }} 条):</h3>
+		 <h3 v-if="selectedFunction === 'localitiesElementsIncExc'">Materials Localities_elements_inc_exc(共 {{ geomaterials.length }} 条):</h3>
+		 <h3 v-if="selectedFunction === 'localitiesAge'">Materials Localities_age(共 {{ geomaterials.length }} 条):</h3>	
+		 <h3 v-if="selectedFunction === 'mineralsImaList'">Materials minerals_ima_list(共 {{ geomaterials.length }} 条):</h3>	
+		 <h3 v-if="selectedFunction === 'mineralsImaRetrieve'">Materials minerals_ima_retrieve(共 {{ geomaterials.length }} 条):</h3>
       <ul>
             <li v-for="(material, index) in geomaterials" :key="'material-' + index">
               <!-- <p><strong>Name:</strong> {{ material.name }}</p> -->
@@ -552,7 +552,7 @@
       fetchGeomaterials() {
         const elements = this.elementInput.split(',').map(el => el.trim()); // 解析用户输入的元素
         this.geomaterials = []; // 清空之前的数据
-        this.fetchGeomaterialsPage('https://api.mindat.org/geomaterials/', elements);
+        this.fetchGeomaterialsPage('https://api.mindat.org/v1/geomaterials/', elements);
 		this.cancelRequest = false; // 重置取消标志为 false
       },
       fetchGeomaterialsPage(url, elements) {
@@ -594,7 +594,7 @@
       fetchGeomaterialsNotContain() {
         const elements = this.elementInput.split(',').map(el => el.trim()); // 解析用户输入的元素
         this.geomaterials = []; // 清空之前的数据
-        this.fetchGeomaterialsNotContainPage('https://api.mindat.org/geomaterials/', elements);
+        this.fetchGeomaterialsNotContainPage('https://api.mindat.org/v1/geomaterials/', elements);
 		this.cancelRequest = false; // 重置取消标志为 false
       },
       fetchGeomaterialsNotContainPage(url, elements) {
@@ -637,7 +637,7 @@
 	      const includeElements = this.elementInput.split(',').map(el => el.trim());
 	      const excludeElements = this.excludeElementInput.split(',').map(el => el.trim());
 	      this.geomaterials = [];
-	      this.fetchGeomaterialsContainAllButNotPage('https://api.mindat.org/geomaterials/', includeElements, excludeElements);
+	      this.fetchGeomaterialsContainAllButNotPage('https://api.mindat.org/v1/geomaterials/', includeElements, excludeElements);
 		  this.cancelRequest = false; // 重置取消标志为 false
 	    },
 	fetchGeomaterialsContainAllButNotPage(url, includeElements, excludeElements) {
@@ -677,7 +677,7 @@
 		
 		fetchMaterials() {
 		  this.geomaterials = [];
-		  this.fetchMaterialsPage('https://api.mindat.org/geomaterials/')
+		  this.fetchMaterialsPage('https://api.mindat.org/v1/geomaterials/')
 		  this.cancelRequest = false; // 重置取消标志为 false
 		},
 		fetchMaterialsPage(url) {
@@ -715,7 +715,7 @@
 		},
 		fetchMaterialsLt() {
 		  this.geomaterials = [];
-		  this.fetchMaterialsLTPage('https://api.mindat.org/geomaterials/')
+		  this.fetchMaterialsLTPage('https://api.mindat.org/v1/geomaterials/')
 		  this.cancelRequest = false; // 重置取消标志为 false
 		},
 		fetchMaterialsLTPage(url) {
@@ -753,7 +753,7 @@
 		},
 		fetchMaterialsRange(){
 			this.geomaterials = [];
-			this.fetchMaterialsRangePage('https://api.mindat.org/geomaterials/')
+			this.fetchMaterialsRangePage('https://api.mindat.org/v1/geomaterials/')
 			this.cancelRequest = false; // 重置取消标志为 false
 		},
 		fetchMaterialsRangePage(url) {
@@ -798,7 +798,7 @@
 	  ];
 	  const excludeElements = all_minerals.filter(el => !elements.includes(el));
 	  this.geomaterials = []; // 清空之前的数据
-	  this.fetchGeomaterialsContainOnlyElemsPage('https://api.mindat.org/geomaterials/', elements, excludeElements);
+	  this.fetchGeomaterialsContainOnlyElemsPage('https://api.mindat.org/v1/geomaterials/', elements, excludeElements);
 	  this.cancelRequest = false; // 重置取消标志为 false
 	  },
 	  fetchGeomaterialsContainOnlyElemsPage(url, elements, excludeElements) {
@@ -837,7 +837,7 @@
 	},
 	fetchDensGT() {
 	  this.geomaterials = [];
-	  this.fetchDensGTPage('https://api.mindat.org/geomaterials/')
+	  this.fetchDensGTPage('https://api.mindat.org/v1/geomaterials/')
 	  this.cancelRequest = false; // 重置取消标志为 false
 	},
 	fetchDensGTPage(url) {
@@ -875,7 +875,7 @@
 	},
 	fetchDensLT() {
 	  this.geomaterials = [];
-	  this.fetchDensLTPage('https://api.mindat.org/geomaterials/')
+	  this.fetchDensLTPage('https://api.mindat.org/v1/geomaterials/')
 	  this.cancelRequest = false; // 重置取消标志为 false
 	},
 	fetchDensLTPage(url) {
@@ -913,7 +913,7 @@
 	},
 	fetchDensRange(){
 		this.geomaterials = [];
-		this.fetchDensRangePage('https://api.mindat.org/geomaterials/')
+		this.fetchDensRangePage('https://api.mindat.org/v1/geomaterials/')
 		this.cancelRequest = false; // 重置取消标志为 false
 	},
 	fetchDensRangePage(url) {
@@ -952,7 +952,7 @@
 	},
 	fetchoptical2vRange(){
 		this.geomaterials = [];
-		this.fetchoptical2vRangePage('https://api.mindat.org/geomaterials/')
+		this.fetchoptical2vRangePage('https://api.mindat.org/v1/geomaterials/')
 		this.cancelRequest = false; // 重置取消标志为 false
 	},
 	fetchoptical2vRangePage(url) {
@@ -991,7 +991,7 @@
 	},
 	fetchCsystem() {
 	  this.geomaterials = [];
-	  this.fetchCsystemPage('https://api.mindat.org/geomaterials/')
+	  this.fetchCsystemPage('https://api.mindat.org/v1/geomaterials/')
 	  this.cancelRequest = false; // 重置取消标志为 false
 	},
 	fetchCsystemPage(url) {
@@ -1030,7 +1030,7 @@
 	},
 	fetchFracturetype() {
 	  this.geomaterials = [];
-	  this.fetchFracturetypePage('https://api.mindat.org/geomaterials/')
+	  this.fetchFracturetypePage('https://api.mindat.org/v1/geomaterials/')
 	  this.cancelRequest = false; // 重置取消标志为 false
 	},
 	fetchFracturetypePage(url) {
@@ -1070,7 +1070,7 @@
 	},
 	fetchColour() {
 	  this.geomaterials = [];
-	  this.fetchColourPage('https://api.mindat.org/geomaterials/')
+	  this.fetchColourPage('https://api.mindat.org/v1/geomaterials/')
 	  this.cancelRequest = false; // 重置取消标志为 false
 	},
 	fetchColourPage(url) {
@@ -1109,7 +1109,7 @@
 	},
 	fetchStreak() {
 	  this.geomaterials = [];
-	  this.fetchStreakPage('https://api.mindat.org/geomaterials/')
+	  this.fetchStreakPage('https://api.mindat.org/v1/geomaterials/')
 	  this.cancelRequest = false; // 重置取消标志为 false
 	},
 	fetchStreakPage(url) {
@@ -1149,7 +1149,7 @@
 	},
 	fetchDiapheny() {
 	  this.geomaterials = [];
-	  this.fetchDiaphenyPage('https://api.mindat.org/geomaterials/')
+	  this.fetchDiaphenyPage('https://api.mindat.org/v1/geomaterials/')
 	  this.cancelRequest = false; // 重置取消标志为 false
 	},
 	fetchDiaphenyPage(url) {
@@ -1189,7 +1189,7 @@
 	},
 	fetchLustretype() {
 	  this.geomaterials = [];
-	  this.fetchLustretypePage('https://api.mindat.org/geomaterials/')
+	  this.fetchLustretypePage('https://api.mindat.org/v1/geomaterials/')
 	  this.cancelRequest = false; // 重置取消标志为 false
 	},
 	fetchLustretypePage(url) {
@@ -1229,7 +1229,7 @@
 	},
 	fetchOpticalsign() {
 	  this.geomaterials = [];
-	  this.fetchOpticalsignPage('https://api.mindat.org/geomaterials/')
+	  this.fetchOpticalsignPage('https://api.mindat.org/v1/geomaterials/')
 	  this.cancelRequest = false; // 重置取消标志为 false
 	},
 	fetchOpticalsignPage(url) {
@@ -1269,7 +1269,7 @@
 	},
 	fetchPolytypeof() {
 	  this.geomaterials = [];
-	  this.fetchPolytypeofPage('https://api.mindat.org/geomaterials/')
+	  this.fetchPolytypeofPage('https://api.mindat.org/v1/geomaterials/')
 	  this.cancelRequest = false; // 重置取消标志为 false
 	},
 	fetchPolytypeofPage(url) {
@@ -1309,7 +1309,7 @@
 	},
 	fetchCleavagetype() {
 	  this.geomaterials = [];
-	  this.fetchCleavagetypePage('https://api.mindat.org/geomaterials/')
+	  this.fetchCleavagetypePage('https://api.mindat.org/v1/geomaterials/')
 	  this.cancelRequest = false; // 重置取消标志为 false
 	},
 	fetchCleavagetypePage(url) {
@@ -1349,7 +1349,7 @@
 	},
 	fetchName() {
 	  this.geomaterials = [];
-	  this.fetchNamePage('https://api.mindat.org/geomaterials/')
+	  this.fetchNamePage('https://api.mindat.org/v1/geomaterials/')
 	  this.cancelRequest = false; // 重置取消标志为 false
 	},
 	fetchNamePage(url) {
@@ -1389,7 +1389,7 @@
 	},
 	fetchSearchName() {
 	  this.geomaterials = [];
-	  this.fetchSearchNamePage('https://api.mindat.org/geomaterials/')
+	  this.fetchSearchNamePage('https://api.mindat.org/v1/geomaterials/')
 	  this.cancelRequest = false; // 重置取消标志为 false
 	},
 	fetchSearchNamePage(url) {
@@ -1427,12 +1427,12 @@
 	},
 	// fetchId() {
 	//   this.geomaterials = [];
-	//   this.fetchIdPage(`https://api.mindat.org/geomaterials/${this.id}/`)
+	//   this.fetchIdPage(`https://api.mindat.org/v1/geomaterials/${this.id}/`)
 	// },
 	fetchId(url) {
 	this.geomaterials = [];
 	  uni.request({
-	    url: `https://api.mindat.org/geomaterials/${this.id}/`,
+	    url: `https://api.mindat.org/v1/geomaterials/${this.id}/`,
 	    method: 'GET',
 	    header: {
 	      'Authorization': 'Token ' + this.apiToken
@@ -1460,7 +1460,7 @@
 	},
 	fetchVarietyof() {
 	  this.geomaterials = [];
-	  this.fetchVarietyofPage('https://api.mindat.org/geomaterials/')
+	  this.fetchVarietyofPage('https://api.mindat.org/v1/geomaterials/')
 	  this.cancelRequest = false; // 重置取消标志为 false
 	},
 	fetchVarietyofPage(url) {
@@ -1499,7 +1499,7 @@
 	},
 	fetchEntrytype() {
 	  this.geomaterials = [];
-	  this.fetchEntrytypePage('https://api.mindat.org/geomaterials/')
+	  this.fetchEntrytypePage('https://api.mindat.org/v1/geomaterials/')
 	  this.cancelRequest = false; // 重置取消标志为 false
 	},
 	fetchEntrytypePage(url) {
@@ -1538,7 +1538,7 @@
 	},
 	fetchImastatus() {
 	  this.geomaterials = [];
-	  this.fetchImastatusPage('https://api.mindat.org/geomaterials/')
+	  this.fetchImastatusPage('https://api.mindat.org/v1/geomaterials/')
 	  this.cancelRequest = false; // 重置取消标志为 false
 	},
 	fetchImastatusPage(url) {
@@ -1582,7 +1582,7 @@
 	fetchCombined() {
 	  const elements = this.elementInput.split(',').map(el => el.trim()); // 解析用户输入的元素
 	  this.geomaterials = []; // 清空之前的数据
-	  this.fetchCombinedPage('https://api.mindat.org/geomaterials/', elements);
+	  this.fetchCombinedPage('https://api.mindat.org/v1/geomaterials/', elements);
 	  this.cancelRequest = false; // 重置取消标志为 false
 	},
 	
@@ -1655,7 +1655,7 @@
 	},
 	fetchCountrylist() {
 	  this.geomaterials = [];
-	  this.fetchCountrylistPage("https://api.mindat.org/localities/")
+	  this.fetchCountrylistPage("https://api.mindat.org/v1/localities/")
 	  this.cancelRequest = false; // 重置取消标志为 false
 	},
 	fetchCountrylistPage(url) {
@@ -1699,7 +1699,7 @@
 	fetchLocalitiesid(url) {
 	this.geomaterials = [];
 	  uni.request({
-	    url: `https://api.mindat.org/localities/${this.localitiesid}/`,
+	    url: `https://api.mindat.org/v1/localities/${this.localitiesid}/`,
 	    method: 'GET',
 	    header: {
 	      'Authorization': 'Token ' + this.apiToken
@@ -1736,7 +1736,7 @@
 	},
 	fetchDescription() {
 	  this.geomaterials = [];
-	  this.fetchDescriptionPage("https://api.mindat.org/localities/")
+	  this.fetchDescriptionPage("https://api.mindat.org/v1/localities/")
 	  this.cancelRequest = false; // 重置取消标志为 false
 	},
 	fetchDescriptionPage(url) {
@@ -1780,7 +1780,7 @@
 	fetchLocalitiesElementsInc() {
 	  const elements = this.localitiesElementsInput.split(',').map(el => el.trim()); // 解析用户输入的元素
 	  this.geomaterials = []; // 清空之前的数据
-	  this.fetchLocalitiesElementsIncPage('https://api.mindat.org/localities/', elements);
+	  this.fetchLocalitiesElementsIncPage('https://api.mindat.org/v1/localities/', elements);
 	  this.cancelRequest = false; // 重置取消标志为 false
 	},
 	fetchLocalitiesElementsIncPage(url, elements) {
@@ -1825,7 +1825,7 @@
 	fetchLocalitiesElementsExc() {
 	  const elements = this.localitiesElementsInput.split(',').map(el => el.trim()); // 解析用户输入的元素
 	  this.geomaterials = []; // 清空之前的数据
-	  this.fetchLocalitiesElementsExcPage('https://api.mindat.org/localities/', elements);
+	  this.fetchLocalitiesElementsExcPage('https://api.mindat.org/v1/localities/', elements);
 	  this.cancelRequest = false; // 重置取消标志为 false
 	},
 	fetchLocalitiesElementsExcPage(url, elements) {
@@ -1871,7 +1871,7 @@
 	      const includeElements = this.localitiesElementsInput.split(',').map(el => el.trim());
 	      const excludeElements = this.localitiesExcludeElementInput.split(',').map(el => el.trim());
 	      this.geomaterials = [];
-	      this.fetchLocalitiesElementsIncExcPage('https://api.mindat.org/localities/', includeElements, excludeElements);
+	      this.fetchLocalitiesElementsIncExcPage('https://api.mindat.org/v1/localities/', includeElements, excludeElements);
 		  this.cancelRequest = false; // 重置取消标志为 false
 	    },
 	fetchLocalitiesElementsIncExcPage(url, includeElements, excludeElements) {
@@ -1915,7 +1915,7 @@
 	fetchLocalitiesAge(url) {
 	this.geomaterials = [];
 	  uni.request({
-	    url: `https://api.mindat.org/locality_age/${this.ageid}/`,
+	    url: `https://api.mindat.org/v1/locality_age/${this.ageid}/`,
 	    method: 'GET',
 	    header: {
 	      'Authorization': 'Token ' + this.apiToken
@@ -1949,7 +1949,7 @@
 	},
 	fetchMineralsImaList() {
 	  this.geomaterials = [];
-	  this.fetchMineralsImaListPage("https://api.mindat.org/minerals_ima/")
+	  this.fetchMineralsImaListPage("https://api.mindat.org/v1/minerals_ima/")
 	  this.cancelRequest = false; // 重置取消标志为 false
 	},
 	fetchMineralsImaListPage(url) {
@@ -1991,7 +1991,7 @@
 	fetchMineralsImaRetrieve(url) {
 	this.geomaterials = [];
 	  uni.request({
-	    url: `https://api.mindat.org/minerals_ima/${this.imaid}/`,
+	    url: `https://api.mindat.org/v1/minerals_ima/${this.imaid}/`,
 	    method: 'GET',
 	    header: {
 	      'Authorization': 'Token ' + this.apiToken
