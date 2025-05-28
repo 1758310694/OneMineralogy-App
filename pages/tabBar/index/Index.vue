@@ -10,7 +10,7 @@
       </swiper>
     </view>
     <view class="button-section">
-      <button @click="goToSearch">Mineral Query</button>
+      <button @click="goToSearch">检索</button>
     </view>
 	 <view class="text-container">
 	    <view class="section">
