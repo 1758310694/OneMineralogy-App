@@ -1,4 +1,11 @@
 <template>
+	<view class="input-group" style="display: flex; align-items: center; margin: 16rpx; padding: 16rpx; background-color: #f5f5f5; border-radius: 12rpx;">
+	  <text style="width: 180rpx; font-weight: bold;">API Token:</text>
+	  <input v-model="apiToken"
+	         placeholder="请输入你的 API Token"
+	         style="flex: 1; padding: 12rpx; border: 1px solid #ccc; border-radius: 8rpx; background-color: #fff;" />
+	</view>
+
   <view class="home">
 <!-- 	<h2 class="search-title"></h2> <!-- 添加的标题 --> 
     <!-- 搜索元素的输入和选择功能 -->
@@ -52,26 +59,26 @@
     </view>
     <!-- 搜索按钮 -->
     <view class="search-button">
-      <button @click="executeFunction">Search</button>
-	  <button @click="resetPageToInitialState">Reset</button>
-      <button @click="openModal">Download</button> <!-- 下载按钮 -->
+      <button @click="executeFunction">搜索</button>
+	  <button @click="resetPageToInitialState">重置</button>
+      <button @click="openModal">下载</button> <!-- 下载按钮 -->
     
       <div v-if="showModal" class="modal">
         <div class="modal-content">
-          <h3>Select File Format</h3>
+          <h3>选择文件格式</h3>
           <button class="format-button" @click="downloadCSV">CSV</button>
           <button class="format-button" @click="downloadTXT">TXT</button>
           <button class="format-button" @click="downloadJSONLD">JSON-LD</button>
 		  <button class="format-button" @click="downloadTTL">TTL</button>
 		  <button class="format-button" @click="downloadRDF">RDF</button>
-          <button class="cancel-button" @click="closeModal">Cancel</button>
+          <button class="cancel-button" @click="closeModal">取消</button>
         </div>
       </div>
     </view>
     <!-- 地质材料的展示部分 -->
     <view class="geomaterials-section" >
       <h3 v-if="selectedFunction === 'contains'">Materials containing {{ elementInput }}:</h3>
-      <h3 v-else-if="selectedFunction === 'notContains'">Materials not containing {{ elementInput }}:</h3>
+      <h3 v-else-if="selectedFunction === 'notContains'">Materials not containing {{ elementInput }}(共 {{ geomaterials.length }} 条):</h3>
       <h3 v-else-if="selectedFunction === 'containAllButNot'">Materials containing {{ elementInput }} but not {{ excludeElementInput }}:</h3>
       <h3 v-else-if="selectedFunction === 'containOnlyElems'">Materials containing only {{ elementInput }}:</h3>
 	  <h3 v-if="selectedFunction === 'hardnessGT'">Materials with hardness greater than {{ minHardness }}:</h3>
@@ -369,6 +376,8 @@
 		imaid:null,
 		expand:null,
 		cancelRequest: false, // 用于控制是否取消请求
+		apiToken: '',  // 用户输入的 token
+		fetchedCount: 0  
       }
     },
     computed: {
@@ -551,7 +560,7 @@
           url: url,
           method: 'GET',
           header: {
-            'Authorization': 'Token 99ef26e16c7d6eca9941af072bf5532f'
+            'Authorization': 'Token ' + this.apiToken
           },
           data: {
             elements_inc: elements.join(',')
@@ -571,7 +580,7 @@
                 elements: material.elements
               });
             });
-
+			this.fetchedCount = this.geomaterials.length;
             // 如果有下一页，则递归调用 fetchGeomaterialsPage
             if (res.data.next) {
               this.fetchGeomaterialsPage(res.data.next, elements);
@@ -593,7 +602,7 @@
           url: url,
           method: 'GET',
           header: {
-            'Authorization': 'Token 99ef26e16c7d6eca9941af072bf5532f'
+            'Authorization': 'Token ' + this.apiToken
           },
           data: {
             elements_exc: elements.join(',')
@@ -636,7 +645,7 @@
 	        url: url,
 	        method: 'GET',
 	        header: {
-	          'Authorization': 'Token 99ef26e16c7d6eca9941af072bf5532f'
+	          'Authorization': 'Token ' + this.apiToken
 	        },
 	        data: {
 	          elements_inc: includeElements.join(','),
@@ -676,7 +685,7 @@
 		    url: url,
 		    method: 'GET',
 		    header: {
-		      'Authorization': 'Token 99ef26e16c7d6eca9941af072bf5532f'
+		      'Authorization': 'Token ' + this.apiToken
 		    },
 		    data: {
 		      hardness_min: this.minHardness
@@ -714,7 +723,7 @@
 		    url: url,
 		    method: 'GET',
 		    header: {
-		      'Authorization': 'Token 99ef26e16c7d6eca9941af072bf5532f'
+		      'Authorization': 'Token ' + this.apiToken
 		    },
 		    data: {
 		      hardness_max: this.maxHardness
@@ -752,7 +761,7 @@
 		    url: url,
 		    method: 'GET',
 		    header: {
-		      'Authorization': 'Token 99ef26e16c7d6eca9941af072bf5532f'
+		      'Authorization': 'Token ' + this.apiToken
 		    },
 		    data: {
 		      hardness_min: this.minHardness,
@@ -797,7 +806,7 @@
 	    url: url,
 	    method: 'GET',
 	    header: {
-	      'Authorization': 'Token 99ef26e16c7d6eca9941af072bf5532f'
+	      'Authorization': 'Token ' + this.apiToken
 	    },
 	    data: {
 	      elements_inc: elements.join(','),
@@ -836,7 +845,7 @@
 	    url: url,
 	    method: 'GET',
 	    header: {
-	      'Authorization': 'Token 99ef26e16c7d6eca9941af072bf5532f'
+	      'Authorization': 'Token ' + this.apiToken
 	    },
 	    data: {
 	      density_min: this.mindensity
@@ -874,7 +883,7 @@
 	    url: url,
 	    method: 'GET',
 	    header: {
-	      'Authorization': 'Token 99ef26e16c7d6eca9941af072bf5532f'
+	      'Authorization': 'Token ' + this.apiToken
 	    },
 	    data: {
 	      density_max: this.maxdensity
@@ -912,7 +921,7 @@
 	    url: url,
 	    method: 'GET',
 	    header: {
-	      'Authorization': 'Token 99ef26e16c7d6eca9941af072bf5532f'
+	      'Authorization': 'Token ' + this.apiToken
 	    },
 	    data: {
 	      density_min: this.mindensity,
@@ -951,7 +960,7 @@
 	    url: url,
 	    method: 'GET',
 	    header: {
-	      'Authorization': 'Token 99ef26e16c7d6eca9941af072bf5532f'
+	      'Authorization': 'Token ' + this.apiToken
 	    },
 	    data: {
 	      optical2v_min: this.minoptical2v,
@@ -990,7 +999,7 @@
 	    url: url,
 	    method: 'GET',
 	    header: {
-	      'Authorization': 'Token 99ef26e16c7d6eca9941af072bf5532f'
+	      'Authorization': 'Token ' + this.apiToken
 	    },
 	    data: {
 	      crystal_system: this.csystem
@@ -1029,7 +1038,7 @@
 	    url: url,
 	    method: 'GET',
 	    header: {
-	      'Authorization': 'Token 99ef26e16c7d6eca9941af072bf5532f'
+	      'Authorization': 'Token ' + this.apiToken
 	    },
 	    data: {
 	      fracturetype: this.fracturetype
@@ -1069,7 +1078,7 @@
 	    url: url,
 	    method: 'GET',
 	    header: {
-	      'Authorization': 'Token 99ef26e16c7d6eca9941af072bf5532f'
+	      'Authorization': 'Token ' + this.apiToken
 	    },
 	    data: {
 	      colour: this.colour
@@ -1108,7 +1117,7 @@
 	    url: url,
 	    method: 'GET',
 	    header: {
-	      'Authorization': 'Token 99ef26e16c7d6eca9941af072bf5532f'
+	      'Authorization': 'Token ' + this.apiToken
 	    },
 	    data: {
 	      streak: this.streak
@@ -1148,7 +1157,7 @@
 	    url: url,
 	    method: 'GET',
 	    header: {
-	      'Authorization': 'Token 99ef26e16c7d6eca9941af072bf5532f'
+	      'Authorization': 'Token ' + this.apiToken
 	    },
 	    data: {
 	      diapheny: this.diapheny
@@ -1188,7 +1197,7 @@
 	    url: url,
 	    method: 'GET',
 	    header: {
-	      'Authorization': 'Token 99ef26e16c7d6eca9941af072bf5532f'
+	      'Authorization': 'Token ' + this.apiToken
 	    },
 	    data: {
 	      lustretype: this.lustretype
@@ -1228,7 +1237,7 @@
 	    url: url,
 	    method: 'GET',
 	    header: {
-	      'Authorization': 'Token 99ef26e16c7d6eca9941af072bf5532f'
+	      'Authorization': 'Token ' + this.apiToken
 	    },
 	    data: {
 	      opticalsign: this.opticalsign
@@ -1268,7 +1277,7 @@
 	    url: url,
 	    method: 'GET',
 	    header: {
-	      'Authorization': 'Token 99ef26e16c7d6eca9941af072bf5532f'
+	      'Authorization': 'Token ' + this.apiToken
 	    },
 	    data: {
 	      polytypeof: this.polytypeof
@@ -1308,7 +1317,7 @@
 	    url: url,
 	    method: 'GET',
 	    header: {
-	      'Authorization': 'Token 99ef26e16c7d6eca9941af072bf5532f'
+	      'Authorization': 'Token ' + this.apiToken
 	    },
 	    data: {
 	      cleavagetype: this.cleavagetype
@@ -1348,7 +1357,7 @@
 	    url: url,
 	    method: 'GET',
 	    header: {
-	      'Authorization': 'Token 99ef26e16c7d6eca9941af072bf5532f'
+	      'Authorization': 'Token ' + this.apiToken
 	    },
 	    data: {
 	      name: this.name
@@ -1388,7 +1397,7 @@
 	    url: url,
 	    method: 'GET',
 	    header: {
-	      'Authorization': 'Token 99ef26e16c7d6eca9941af072bf5532f'
+	      'Authorization': 'Token ' + this.apiToken
 	    },
 	    data: {
 	      q: this.q
@@ -1426,7 +1435,7 @@
 	    url: `https://api.mindat.org/geomaterials/${this.id}/`,
 	    method: 'GET',
 	    header: {
-	      'Authorization': 'Token 99ef26e16c7d6eca9941af072bf5532f'
+	      'Authorization': 'Token ' + this.apiToken
 	    },
 	    data: {
 	      id: this.id
@@ -1459,7 +1468,7 @@
 	    url: url,
 	    method: 'GET',
 	    header: {
-	      'Authorization': 'Token 99ef26e16c7d6eca9941af072bf5532f'
+	      'Authorization': 'Token ' + this.apiToken
 	    },
 	    data: {
 	      varietyof: this.varietyof
@@ -1498,7 +1507,7 @@
 	    url: url,
 	    method: 'GET',
 	    header: {
-	      'Authorization': 'Token 99ef26e16c7d6eca9941af072bf5532f'
+	      'Authorization': 'Token ' + this.apiToken
 	    },
 	    data: {
 	      entrytype: this.entrytype
@@ -1537,7 +1546,7 @@
 	    url: url,
 	    method: 'GET',
 	    header: {
-	      'Authorization': 'Token 99ef26e16c7d6eca9941af072bf5532f'
+	      'Authorization': 'Token ' + this.apiToken
 	    },
 	    data: {
 	      ima_status: this.imastatus
@@ -1609,7 +1618,7 @@
 	    url: url,
 	    method: 'GET',
 	    header: {
-	      'Authorization': 'Token 99ef26e16c7d6eca9941af072bf5532f'
+	      'Authorization': 'Token ' + this.apiToken
 	    },
 	    data: params, // 使用动态构建的参数
 	    success: (res) => {
@@ -1654,7 +1663,7 @@
 	    url: url,
 	    method: 'GET',
 	    header: {
-	      'Authorization': 'Token 99ef26e16c7d6eca9941af072bf5532f'
+	      'Authorization': 'Token ' + this.apiToken
 	    },
 	    data: {
 	      country: this.country
@@ -1693,7 +1702,7 @@
 	    url: `https://api.mindat.org/localities/${this.localitiesid}/`,
 	    method: 'GET',
 	    header: {
-	      'Authorization': 'Token 99ef26e16c7d6eca9941af072bf5532f'
+	      'Authorization': 'Token ' + this.apiToken
 	    },
 	    data: {
 	      id: this.localitiesid
@@ -1735,7 +1744,7 @@
 	    url: url,
 	    method: 'GET',
 	    header: {
-	      'Authorization': 'Token 99ef26e16c7d6eca9941af072bf5532f'
+	      'Authorization': 'Token ' + this.apiToken
 	    },
 	    data: {
 	      description: this.description
@@ -1779,7 +1788,7 @@
 	    url: url,
 	    method: 'GET',
 	    header: {
-	      'Authorization': 'Token 99ef26e16c7d6eca9941af072bf5532f'
+	      'Authorization': 'Token ' + this.apiToken
 	    },
 	    data: {
 	      elements_inc: elements.join(',')
@@ -1824,7 +1833,7 @@
 	    url: url,
 	    method: 'GET',
 	    header: {
-	      'Authorization': 'Token 99ef26e16c7d6eca9941af072bf5532f'
+	      'Authorization': 'Token ' + this.apiToken
 	    },
 	    data: {
 	      elements_exc: elements.join(',')
@@ -1870,7 +1879,7 @@
 	        url: url,
 	        method: 'GET',
 	        header: {
-	          'Authorization': 'Token 99ef26e16c7d6eca9941af072bf5532f'
+	          'Authorization': 'Token ' + this.apiToken
 	        },
 	        data: {
 	          elements_inc: includeElements.join(','),
@@ -1909,7 +1918,7 @@
 	    url: `https://api.mindat.org/locality_age/${this.ageid}/`,
 	    method: 'GET',
 	    header: {
-	      'Authorization': 'Token 99ef26e16c7d6eca9941af072bf5532f'
+	      'Authorization': 'Token ' + this.apiToken
 	    },
 	    data: {
 	      age_id: this.ageid
@@ -1948,7 +1957,7 @@
 	    url: url,
 	    method: 'GET',
 	    header: {
-	      'Authorization': 'Token 99ef26e16c7d6eca9941af072bf5532f'
+	      'Authorization': 'Token ' + this.apiToken
 	    },
 	    data: { 
 	      // description: this.description
@@ -1985,7 +1994,7 @@
 	    url: `https://api.mindat.org/minerals_ima/${this.imaid}/`,
 	    method: 'GET',
 	    header: {
-	      'Authorization': 'Token 99ef26e16c7d6eca9941af072bf5532f'
+	      'Authorization': 'Token ' + this.apiToken
 	    },
 	    data: {
 	      id: this.imaid
