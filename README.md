@@ -35,13 +35,11 @@ git clone https://github.com/1758310694/OneMineralogy-App.git
 
 <img src="/static/image2/search.png?raw=true" width="20%">
 
-1、OpenMindat Data API token获取
+1、①处输入API Token
 
-首先该APP在Mindat连接需要token作为权限访问服务器，用户可获取token。
+Token获取：https://www.mindat.org/a/how_to_get_my_mindat_api_key
 
-token获取步骤：https://www.mindat.org/a/how_to_get_my_mindat_api_key
-
-
+2、
 
 
 
