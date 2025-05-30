@@ -13,7 +13,7 @@ export default {
   },
   onLoad() {
     // 调用后端接口获取 HTML 文件的 URL
-    this.htmlUrl = 'http://172.31.152.31:80//minerals_network.html';
+    this.htmlUrl = 'https://app-wlbr.onrender.com//minerals_network.html';
   }
 };
 </script>
