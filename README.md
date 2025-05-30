@@ -43,6 +43,8 @@ Token获取：https://www.mindat.org/a/how_to_get_my_mindat_api_key
 
 3、③处输入检索参数值,详情可见API文档:https://api.mindat.org/schema/redoc/
 
+4、④处点击后进行查询
 
+5、⑤处点击后下载查询文件，支持CSV、TXT、JSON-LD、TTL、RDF格式
 
 
