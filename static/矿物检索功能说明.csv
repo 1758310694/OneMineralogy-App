@@ -1,6 +1,6 @@
 number,检索功能,说明
-1,geomaterials_contain_all_elements(contains),检索出包含全部输入元素的矿物记录
-2,geomaterials_not_contain_elements(notContains),检索出不包含全部输入元素的矿物记录
+1,geomaterials_contain_all_elements(contains),检索出包含全部输入元素的地质材料
+2,geomaterials_not_contain_elements(notContains),检索出不包含全部输入元素的地质材料
 3,geomaterials_contain_all_but_not_elements(containAllButNot),检索出包含第一个所有输入元素而不含第二个所有输入元素的地质材料
 4,geomaterials_contain_only_elements(containOnlyElems),检索出只含有输入元素的地质材料
 5,geomaterials_hardness_greater_than(hardnessGT),检索硬度高于给定值的地质材料
