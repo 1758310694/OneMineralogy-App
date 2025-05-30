@@ -2,7 +2,7 @@
 用于从OpenMindat数据接口(API)访问和分析Mindat开放数据的应用程序(APP)
 
 ### 概述
-`OneMineralogy`是一个基于Vue和Uni-app框架开发的JavaScript的移动端应用程序
+`OneMineralogy`是一个基于Vue和Uni-app框架开发的JavaScript的移动端应用程序，实现多种检索功能获取不同需求的矿物数据，并初步支持交互式查询、探索性分析及推理等任务
 
 ### 开始
 
@@ -46,5 +46,7 @@ Token获取：https://www.mindat.org/a/how_to_get_my_mindat_api_key
 4、④处点击后进行查询
 
 5、⑤处点击后下载查询文件，支持CSV、TXT、JSON-LD、TTL、RDF格式
+
+**交互式查询、探索性分析、推理等用例分析**
 
 
