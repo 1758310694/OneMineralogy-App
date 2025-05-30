@@ -33,7 +33,7 @@ git clone https://github.com/1758310694/OneMineralogy-App.git
 
 **操作使用说明**
 
-<img src="/static/image2/search.png?raw=true" width="40%">
+<img src="/static/image2/search.png?raw=true" width="20%">
 
 1、OpenMindat Data API token获取
 
