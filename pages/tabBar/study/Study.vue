@@ -102,7 +102,7 @@ export default {
         this.output = "";
         try {
           const res = await uni.request({
-            url: `http://172.31.152.31:80/run?script=${scriptName}`,
+            url: `https://app-wlbr.onrender.com/run?script=${scriptName}`,
             method: 'GET',
             header: { 'Content-Type': 'application/json' }
           });
@@ -119,7 +119,7 @@ export default {
         this.output = "";
         try {
           const res = await uni.request({
-            url: `http://172.31.152.31:80/run?script=${scriptName}`,
+            url: `https://app-wlbr.onrender.com/run?script=${scriptName}`,
             method: 'GET',
             header: { 'Content-Type': 'application/json' }
           });
@@ -136,7 +136,7 @@ export default {
         this.output = "";
         try {
           const res = await uni.request({
-            url: `http://172.31.152.31:80/run?script=${scriptName}`,
+            url: `https://app-wlbr.onrender.com/run?script=${scriptName}`,
             method: 'GET',
             header: { 'Content-Type': 'application/json' }
           });
@@ -160,7 +160,7 @@ export default {
       } else {
         try {
           const res = await uni.request({
-            url: `http://172.31.152.31:80/run?script=${scriptName}`,
+            url: `https://app-wlbr.onrender.com/run?script=${scriptName}`,
             method: 'GET',
             header: { 'Content-Type': 'application/json' }
           });
@@ -173,7 +173,7 @@ export default {
 
     // 从服务器获取 geomaterials.json
     loadLocalJson() {
-      const filePath = 'http://172.31.152.31:80/geomaterials';  // 后端服务提供的 API 路径
+      const filePath = 'https://app-wlbr.onrender.com/geomaterials';  // 后端服务提供的 API 路径
 
       uni.request({
         url: filePath,
