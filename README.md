@@ -1,8 +1,8 @@
-# OneMineralogy App
-用于从OpenMindat Data API检索获取Mindat开放数据的APP
+# OneMineralogy
+用于从OpenMindat数据接口(API)访问和分析Mindat开放数据的应用程序(APP)
 
 ### 概述
-`OneMineralogy APP`是是一个应用软件，用于通过OpenMindat Data API提供的实时数据服务来检索和处理开放数据。
+`OneMineralogy`是一个基于Vue和Uni-app框架开发的JavaScript的移动端应用程序
 
 ### 开始
 
@@ -30,7 +30,10 @@ git clone https://github.com/1758310694/OneMineralogy-App.git
 
 3、选择`发行`-->`云打包`即可打包为安装包，在移动端使用
 
-**OpenMindat Data API token获取**
+
+**操作使用说明**
+
+1、OpenMindat Data API token获取
 
 首先该APP在Mindat连接需要token作为权限访问服务器，用户可获取token。
 
