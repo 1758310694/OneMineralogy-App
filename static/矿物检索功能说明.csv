@@ -24,6 +24,7 @@ geomaterials_search_name(q),通过给定名称检索包含该名称的地质材�
 mindat_geomaterial(id),通过id检索地质材料
 geomaterials_varietyof(varietyof),检索属于给定地质材料id的种类的地质材料
 geomaterials_entrytype(entrytype),检索具有给定条目类型的地质材料
+geomaterials_imastatus(imastatus),检索ima许可的地质材料
 geomaterial_retrieved_by_combined_conditions(retrievedbycombined),检索满足多种联合条件的地质材料
 localities_country(countrylist),查询给定国家/地区内的地区列表
 localities_retrieve_id(localitiesid),根据给定的id查询所在地
