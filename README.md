@@ -32,7 +32,7 @@ git clone https://github.com/1758310694/OneMineralogy-App.git
 
 
 **操作使用说明**
-检索界面
+
 <img src="/static/image2/search.png?raw=true" width="20%">
 
 1、①处输入API Token
@@ -48,6 +48,6 @@ Token获取：https://www.mindat.org/a/how_to_get_my_mindat_api_key
 5、⑤处点击后下载查询文件，支持CSV、TXT、JSON-LD、TTL、RDF格式
 
 **交互式查询、探索性分析、推理等用例分析**
-用例分析
+
 <img src="/static/image2/use case.png?raw=true" width="20%">
 
