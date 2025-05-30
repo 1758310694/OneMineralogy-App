@@ -1,38 +1,38 @@
-number,¼ìË÷¹¦ÄÜ,ËµÃ÷
-1,geomaterials_contain_all_elements(contains),¼ìË÷³ö°üº¬È«²¿ÊäÈëÔªËØµÄµØÖÊ²ÄÁÏ
-2,geomaterials_not_contain_elements(notContains),¼ìË÷³ö²»°üº¬È«²¿ÊäÈëÔªËØµÄµØÖÊ²ÄÁÏ
-3,geomaterials_contain_all_but_not_elements(containAllButNot),¼ìË÷³ö°üº¬µÚÒ»¸öËùÓĞÊäÈëÔªËØ¶ø²»º¬µÚ¶ş¸öËùÓĞÊäÈëÔªËØµÄµØÖÊ²ÄÁÏ
-4,geomaterials_contain_only_elements(containOnlyElems),¼ìË÷³öÖ»º¬ÓĞÊäÈëÔªËØµÄµØÖÊ²ÄÁÏ
-5,geomaterials_hardness_greater_than(hardnessGT),¼ìË÷Ó²¶È¸ßÓÚ¸ø¶¨ÖµµÄµØÖÊ²ÄÁÏ
-6,geomaterials_hardness_less_than(hardnessLT),¼ìË÷Ó²¶ÈµÍÓÚ¸ø¶¨ÖµµÄµØÖÊ²ÄÁÏ
-7,geomaterials_hardness_range(hardnessRange),¼ìË÷²éÑ¯Ó²¶ÈÔÚÖ¸¶¨·¶Î§ÄÚµÄµØÖÊ²ÄÁÏ
-8,geomaterials_density_greater_than(densGT),²éÑ¯ÃÜ¶È¸ßÓÚ¸ø¶¨ÖµµÄµØÖÊ²ÄÁÏÁĞ±í
-9,geomaterials_density_less_than(denLT),²éÑ¯ÃÜ¶ÈµÍÓÚ¸ø¶¨ÖµµÄµØÖÊ²ÄÁÏÁĞ±í
-10,geomaterials_density_range(densRange),¼ìË÷²éÑ¯ÃÜ¶ÈÔÚÖ¸¶¨·¶Î§ÄÚµÄµØÖÊ²ÄÁÏ
-11,geomaterials_optical2v_greater_than(optical2vGT),¼ìË÷µØÖÊ²ÄÁÏ¾ßÓĞ±È¸ø¶¨Öµ¸ü¸ßµÄ¹âÑ§2vÖµ
-12,geomaterials_optical2v_less_than(optical2vLT),¼ìË÷µØÖÊ²ÄÁÏ¾ßÓĞ±È¸ø¶¨Öµ¸üµÍµÄ¹âÑ§2vÖµ
-13,geomaterials_optical2v_range(optical2vRange),¼ìË÷¾ßÓĞ¸ø¶¨¹âÑ§2v·¶Î§µÄµØÖÊ²ÄÁÏ
-14,geomaterials_crystal_system(csystem),¼ìË÷¾ßÓĞ¸ø¶¨¾§ÌåµÄµØÖÊ²ÄÁÏ
-15,geomaterials_fracturetype(fracturetype),¼ìË÷¾ßÓĞ¸ø¶¨¶ÏÁÑÀàĞÍµÄµØÖÊ²ÄÁÏ
-16,geomaterials_colour(colour),²éÑ¯Óë¸ø¶¨ÑÕÉ«Æ¥ÅäµÄµØÖÊ²ÄÁÏÁĞ±í
-17,geomaterials_streak(streak),¼ìË÷Óë¸ø¶¨ÌõÎÆÆ¥ÅäµÄµØÖÊ²ÄÁÏ
-18,geomaterials_diapheny(diapheny),¼ìË÷¾ßÓĞ¸ø¶¨·½Î»½ÇµÄµØÖÊ²ÄÁÏ
-19,geomaterials_lustretype(lustretype),¼ìË÷Óë¸ø¶¨¹âÔóÀàĞÍÆ¥ÅäµÄµØÖÊ²ÄÁÏ
-20,geomaterials_opticalsign(opticalsign),¼ìË÷Óë¸ø¶¨¹âÑ§±êÖ¾ÏàÆ¥ÅäµÄµØÖÊ²ÄÁÏ
-21,geomaterials_polytypeof(polytypeof),¸ù¾İ¸ø¶¨µÄ¶àĞÍ±ğ id ¼ìË÷µØÖÊ²ÄÁÏ
-22,geomaterials_cleavagetype(cleavagetype),Óë¸ø¶¨½âÀíÀàĞÍÆ¥ÅäµÄµØÖÊ²ÄÁÏ
-23,geomaterials_name(name):,¼ìË÷Ãû³ÆÖĞÓë¸ø¶¨×Ö·û´®Æ¥ÅäµÄµØÖÊ²ÄÁÏ
-24,geomaterials_search_name(q),Í¨¹ı¸ø¶¨Ãû³Æ¼ìË÷°üº¬¸ÃÃû³ÆµÄµØÖÊ²ÄÁÏ
-25,mindat_geomaterial(id),Í¨¹ıid¼ìË÷µØÖÊ²ÄÁÏ
-26,geomaterials_varietyof(varietyof),¼ìË÷ÊôÓÚ¸ø¶¨µØÖÊ²ÄÁÏidµÄÖÖÀàµÄµØÖÊ²ÄÁÏ
-27,geomaterials_entrytype(entrytype),¼ìË÷¾ßÓĞ¸ø¶¨ÌõÄ¿ÀàĞÍµÄµØÖÊ²ÄÁÏ
-28,geomaterial_retrieved_by_combined_conditions(retrievedbycombined),¼ìË÷Âú×ã¶àÖÖÁªºÏÌõ¼şµÄµØÖÊ²ÄÁÏ
-29,localities_country(countrylist),²éÑ¯¸ø¶¨¹ú¼Ò/µØÇøÄÚµÄµØÇøÁĞ±í
-30,localities_retrieve_id(localitiesid),¸ù¾İ¸ø¶¨µÄid²éÑ¯ËùÔÚµØ
-31,Localities_description(description),²éÑ¯°üº¬¸ø¶¨ÃèÊöµÄµØÇøÁĞ±í
-32,Localities_elements_inc(localitiesElementsInc),²éÑ¯°üº¬¸ø¶¨ÔªËØµÄµØÇøÁĞ±í
-33,Localities_elements_exc(localitiesElementsExc),²»°üº¬¸ø¶¨ÔªËØµÄµØÇøÁĞ±í
-34,Localities_elements_inc_exc(localitiesElementsIncExc),°üº¬¸ø¶¨ÔªËØµ«²»°üº¬ÆäËû¸ø¶¨ÔªËØµÄµØÇøÁĞ±í
-35,Localities_age(localitiesAge),¸ù¾İid¼ìË÷µØÇøÄêÁä¡£
-36,minerals_ima_list(mineralsImaList),¼ìË÷ËùÓĞima¿óÎïÁĞ±í
-37,minerals_ima_retrieve(mineralsImaRetrieve),Í¨¹ıid¼ìË÷ima¿óÎï
+number,æ£€ç´¢åŠŸèƒ½,è¯´æ˜
+1,geomaterials_contain_all_elements(contains),æ£€ç´¢å‡ºåŒ…å«å…¨éƒ¨è¾“å…¥å…ƒç´ çš„çŸ¿ç‰©è®°å½•
+2,geomaterials_not_contain_elements(notContains),æ£€ç´¢å‡ºä¸åŒ…å«å…¨éƒ¨è¾“å…¥å…ƒç´ çš„çŸ¿ç‰©è®°å½•
+3,geomaterials_contain_all_but_not_elements(containAllButNot),æ£€ç´¢å‡ºåŒ…å«ç¬¬ä¸€ä¸ªæ‰€æœ‰è¾“å…¥å…ƒç´ è€Œä¸å«ç¬¬äºŒä¸ªæ‰€æœ‰è¾“å…¥å…ƒç´ çš„åœ°è´¨ææ–™
+4,geomaterials_contain_only_elements(containOnlyElems),æ£€ç´¢å‡ºåªå«æœ‰è¾“å…¥å…ƒç´ çš„åœ°è´¨ææ–™
+5,geomaterials_hardness_greater_than(hardnessGT),æ£€ç´¢ç¡¬åº¦é«˜äºç»™å®šå€¼çš„åœ°è´¨ææ–™
+6,geomaterials_hardness_less_than(hardnessLT),æ£€ç´¢ç¡¬åº¦ä½äºç»™å®šå€¼çš„åœ°è´¨ææ–™
+7,geomaterials_hardness_range(hardnessRange),æ£€ç´¢æŸ¥è¯¢ç¡¬åº¦åœ¨æŒ‡å®šèŒƒå›´å†…çš„åœ°è´¨ææ–™
+8,geomaterials_density_greater_than(densGT),æŸ¥è¯¢å¯†åº¦é«˜äºç»™å®šå€¼çš„åœ°è´¨ææ–™åˆ—è¡¨
+9,geomaterials_density_less_than(denLT),æŸ¥è¯¢å¯†åº¦ä½äºç»™å®šå€¼çš„åœ°è´¨ææ–™åˆ—è¡¨
+10,geomaterials_density_range(densRange),æ£€ç´¢æŸ¥è¯¢å¯†åº¦åœ¨æŒ‡å®šèŒƒå›´å†…çš„åœ°è´¨ææ–™
+11,geomaterials_optical2v_greater_than(optical2vGT),æ£€ç´¢åœ°è´¨ææ–™å…·æœ‰æ¯”ç»™å®šå€¼æ›´é«˜çš„å…‰å­¦2vå€¼
+12,geomaterials_optical2v_less_than(optical2vLT),æ£€ç´¢åœ°è´¨ææ–™å…·æœ‰æ¯”ç»™å®šå€¼æ›´ä½çš„å…‰å­¦2vå€¼
+13,geomaterials_optical2v_range(optical2vRange),æ£€ç´¢å…·æœ‰ç»™å®šå…‰å­¦2vèŒƒå›´çš„åœ°è´¨ææ–™
+14,geomaterials_crystal_system(csystem),æ£€ç´¢å…·æœ‰ç»™å®šæ™¶ä½“çš„åœ°è´¨ææ–™
+15,geomaterials_fracturetype(fracturetype),æ£€ç´¢å…·æœ‰ç»™å®šæ–­è£‚ç±»å‹çš„åœ°è´¨ææ–™
+16,geomaterials_colour(colour),æŸ¥è¯¢ä¸ç»™å®šé¢œè‰²åŒ¹é…çš„åœ°è´¨ææ–™åˆ—è¡¨
+17,geomaterials_streak(streak),æ£€ç´¢ä¸ç»™å®šæ¡çº¹åŒ¹é…çš„åœ°è´¨ææ–™
+18,geomaterials_diapheny(diapheny),æ£€ç´¢å…·æœ‰ç»™å®šæ–¹ä½è§’çš„åœ°è´¨ææ–™
+19,geomaterials_lustretype(lustretype),æ£€ç´¢ä¸ç»™å®šå…‰æ³½ç±»å‹åŒ¹é…çš„åœ°è´¨ææ–™
+20,geomaterials_opticalsign(opticalsign),æ£€ç´¢ä¸ç»™å®šå…‰å­¦æ ‡å¿—ç›¸åŒ¹é…çš„åœ°è´¨ææ–™
+21,geomaterials_polytypeof(polytypeof),æ ¹æ®ç»™å®šçš„å¤šå‹åˆ« id æ£€ç´¢åœ°è´¨ææ–™
+22,geomaterials_cleavagetype(cleavagetype),ä¸ç»™å®šè§£ç†ç±»å‹åŒ¹é…çš„åœ°è´¨ææ–™
+23,geomaterials_name(name):,æ£€ç´¢åç§°ä¸­ä¸ç»™å®šå­—ç¬¦ä¸²åŒ¹é…çš„åœ°è´¨ææ–™
+24,geomaterials_search_name(q),é€šè¿‡ç»™å®šåç§°æ£€ç´¢åŒ…å«è¯¥åç§°çš„åœ°è´¨ææ–™
+25,mindat_geomaterial(id),é€šè¿‡idæ£€ç´¢åœ°è´¨ææ–™
+26,geomaterials_varietyof(varietyof),æ£€ç´¢å±äºç»™å®šåœ°è´¨ææ–™idçš„ç§ç±»çš„åœ°è´¨ææ–™
+27,geomaterials_entrytype(entrytype),æ£€ç´¢å…·æœ‰ç»™å®šæ¡ç›®ç±»å‹çš„åœ°è´¨ææ–™
+28,geomaterial_retrieved_by_combined_conditions(retrievedbycombined),æ£€ç´¢æ»¡è¶³å¤šç§è”åˆæ¡ä»¶çš„åœ°è´¨ææ–™
+29,localities_country(countrylist),æŸ¥è¯¢ç»™å®šå›½å®¶/åœ°åŒºå†…çš„åœ°åŒºåˆ—è¡¨
+30,localities_retrieve_id(localitiesid),æ ¹æ®ç»™å®šçš„idæŸ¥è¯¢æ‰€åœ¨åœ°
+31,Localities_description(description),æŸ¥è¯¢åŒ…å«ç»™å®šæè¿°çš„åœ°åŒºåˆ—è¡¨
+32,Localities_elements_inc(localitiesElementsInc),æŸ¥è¯¢åŒ…å«ç»™å®šå…ƒç´ çš„åœ°åŒºåˆ—è¡¨
+33,Localities_elements_exc(localitiesElementsExc),ä¸åŒ…å«ç»™å®šå…ƒç´ çš„åœ°åŒºåˆ—è¡¨
+34,Localities_elements_inc_exc(localitiesElementsIncExc),åŒ…å«ç»™å®šå…ƒç´ ä½†ä¸åŒ…å«å…¶ä»–ç»™å®šå…ƒç´ çš„åœ°åŒºåˆ—è¡¨
+35,Localities_age(localitiesAge),æ ¹æ®idæ£€ç´¢åœ°åŒºå¹´é¾„ã€‚
+36,minerals_ima_list(mineralsImaList),æ£€ç´¢æ‰€æœ‰imaçŸ¿ç‰©åˆ—è¡¨
+37,minerals_ima_retrieve(mineralsImaRetrieve),é€šè¿‡idæ£€ç´¢imaçŸ¿ç‰©
