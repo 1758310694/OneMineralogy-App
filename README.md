@@ -51,3 +51,6 @@ Token获取：https://www.mindat.org/a/how_to_get_my_mindat_api_key
 
 <img src="/static/image2/use case.png?raw=true" width="20%">
 
+上图界面中`查询`对应可支持属性组合过滤出矿物品种，以及使用Mindat ID查询矿物品种具体属性
+
+
