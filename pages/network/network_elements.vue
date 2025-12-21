@@ -13,7 +13,7 @@ export default {
   },
   onLoad() {
     // 调用后端接口获取 HTML 文件的 URL
-    this.htmlUrl = 'https://app-wlbr.onrender.com//minerals_elements_network.html';
+    this.htmlUrl = 'https://jewelry-change-establish-tabs.trycloudflare.com/minerals_elements_network.html';
   }
 };
 </script>
