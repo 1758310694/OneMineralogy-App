@@ -123,7 +123,7 @@ export default {
         } else {
           const res = await new Promise((resolve, reject) => {
             uni.request({
-              url: `https://app-wlbr.onrender.com/run?script=${scriptName}`,
+              url: `https://jewelry-change-establish-tabs.trycloudflare.com/run?script=${scriptName}`,
               method: 'GET',
               header: { 'Content-Type': 'application/json' },
               success: resolve,
@@ -157,7 +157,7 @@ export default {
         return;
       }
 
-      const filePath = 'https://app-wlbr.onrender.com/geomaterials';
+      const filePath = 'https://jewelry-change-establish-tabs.trycloudflare.com/geomaterials';
 
       try {
         const res = await new Promise((resolve, reject) => {
