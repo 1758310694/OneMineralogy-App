@@ -13,7 +13,7 @@ export default {
   },
   onLoad() {
     // 调用后端接口获取 HTML 文件的 URL
-    this.htmlUrl = 'https://bicycle-current-matched-controls.trycloudflare.com/output_map_Brazil.html';
+    this.htmlUrl = 'https://mineral-fql-app.giswetland.com/output_map_Brazil.html';
   }
 };
 </script>
